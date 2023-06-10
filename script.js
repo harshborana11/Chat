@@ -23,62 +23,8 @@ input.addEventListener("keyup", function(event) {
    document.getElementById("a").click();
   }
 }); 
-var myname
-var hidden = document.getElementById("hidden-box");
-var visible = document.getElementById("container");
-var passwords = [  
-{
-  username : "Harsh",
-  password : "1123"
-}, 
-{
-  username : "Yogesh",
-  password : "50221"
-},
-{
-  username : "Pratyax",
-  password : "6968"
-},
+var myName = prompt("Name");
 
-{
-  username : "BAKAnyan",
-  password : "9898"
-},
-
-{
-  username : "Sai Swaroop",
-  password : "9999"
-},
-{
-  username : "Aila",
-  password : "229994"
-},
-]
-function check(form){
-  var password = document.getElementById('pwd').value;
-  for(i = 0; i < passwords.length; i++ ){
-    if(password == passwords[i].password){  
-      if (visible.style.display === "block" && hidden.style.display === "none" ) {
-        visible.style.display = "none";
-        hidden.style.display = "block";
-        myName= passwords[i].username; 
-        setTimeout(function() {
-  
-          document.body.scrollTop = 10000000000; 
-          document.documentElement.scrollTop = 10000000000;
-        }, 100);
-        return false;
-        }
-        
-    }
-    
-  }
-  
-    swal("Password Incorrect", "You Have entered Wrong Password", "error");
-    return false;
-
-
-}
 
 
 
